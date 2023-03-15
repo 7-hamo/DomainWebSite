@@ -132,9 +132,17 @@ margin-right: 2rem;
     width: 40px;
     height: 40px;
 }
-
+.icon--small{
+    width: 30px;
+    height: 30px;
+}
 .icon--primary{
     color: var(--color-primary);
+    fill: currentColor;
+}
+
+.icon--white{
+    color: #fff;
     fill: currentColor;
 }
 .icon-container{
@@ -145,6 +153,9 @@ margin-right: 2rem;
     height: 64px;
     justify-content: center;
     width: 64px;
+}
+.icon-container-accent{
+    background-color: var(--color-accent);
 }
 /* buttons */
 .butt{
@@ -316,9 +327,6 @@ padding: 2rem 3rem;
 .media__body{
     margin: 0 2rem;
 }
-.media__image{
-    margin-top: 1.5rem;
-}
 
 /* quotes */
 .quotes{
@@ -336,7 +344,7 @@ padding: 2rem 3rem;
 }
 .quote__icon{
     position: relative;
-    bottom: 10px;
+    bottom: -6px;
 }
 .quote__author{
     font-size: 3rem;
@@ -350,6 +358,11 @@ padding: 2rem 3rem;
     color: var(--color-heading);
     opacity: .4;
 }
+@media screen and (min-width:768px) {
+    .quote__icon{
+    bottom: 10px;
+    }
+}
 @media screen and (min-width:1024px) {
     .quotes{
         font-size: 2rem;
@@ -359,5 +372,44 @@ padding: 2rem 3rem;
     }
     .quote__company-name{
         font-size: 1.6;
+    }
+}
+/* grids */
+.grid{
+    display: grid;
+}
+
+@media screen and (min-width:768px) {
+    .grid--1x2{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media screen and (min-width:1024px) {
+    .grid--1x3{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+/* testimonial */
+.testimonial{
+    padding: 2rem 5rem 4rem 5rem;
+    margin: 1rem;
+}
+.testimonial__image{
+    position: relative;
+}
+.testimonial__image > img{
+    width: 100%;
+}
+.testimonial__image > .icon-container{
+position: absolute;
+top: 3rem;
+right: -32px;
+}
+@media screen and (min-width:768px) {
+    .testimonial .quotes , .testimonial .quote__author{
+        font-size: 1.4rem;
+    }
+    .testimonial .quote__company-name{
+        font-size: 1rem;
     }
 }
