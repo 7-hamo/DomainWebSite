@@ -282,10 +282,22 @@ padding: 2rem 3rem;
     background-color: var(--color-accent);
     color: #fff;
 }
+.card--primary .badge--primary{
+    background-color: #1262ca;
+}
 .card--secondary .badge--secondary{
     background-color: #02cdf1;
 }
 /* Plans */
+.plan{
+transition: transform .2s ease-out;
+}
+.plan:hover{
+    transform: scale(1.05);
+}
+.plan--popular:hover{
+    transform: scale(1.15);
+}
 .plan__name{
     color: #fff;
     font-size: 2.4rem;
@@ -309,6 +321,9 @@ padding: 2rem 3rem;
 }
 .plan .list__item{
     margin-bottom: 2rem;
+}
+.plan--popular{
+   transform: scale(1.1);
 }
 .plan--popular .card__header{
     position: relative;
@@ -646,4 +661,12 @@ max-width: 670px;
     display: inherit;
     justify-self: end;
 }
+}
+/* plans block */
+.block-plans .grid{
+gap: 8rem 4rem;
+}
+.block-plans .card{
+    max-width: 500px;
+    margin: 0 auto;
 }
